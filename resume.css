@@ -1,0 +1,31 @@
+* {font-family:Verdana, Geneva;}
+
+ul {list-style-type: square;}
+
+.company {font-weight:bold;}
+.start-end-dates {
+  text-indent:10%
+  direction:rtl;
+}
+.job-title {font-style:italic;}
+
+.sublist-1 {
+  text-indent:0%;
+  list-style:none;
+  }
+  
+.subheading-1 {
+  text-indent:0%;
+  list-style:none;
+}
+
+.subheading-2 {
+  text-indent:0%;
+  list-style:none;
+  text-decoration:underline;
+}
+
+.link {
+  font-size:85%;
+  font-style:italic;
+}
