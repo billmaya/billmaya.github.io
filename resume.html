@@ -7,15 +7,22 @@
 <script type="text/javascript">
 
 	window.onload = function () {
-        CanvasJS.addColorSet("grayShades",
+        CanvasJS.addColorSet("grayShades1",
                 [//colorSet Array
 				"#B0B0B0",
 				"#909090",
 				"#707070",
                 "#505050"
                 ]);	
+        CanvasJS.addColorSet("grayShades2",
+        		[
+        		"#989898",
+        		"#787878",
+        		"#585858",
+        		"#383838"
+        		]);
 	var chart = new CanvasJS.Chart("chartContainer", {
-		//colorSet: "grayShades",
+		colorSet: "grayShades2",
 		data: [              
 		{
 			// Change type to "doughnut", "line", "splineArea", etc.
