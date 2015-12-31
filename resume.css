@@ -9,6 +9,11 @@ ul {list-style-type: square;}
 }
 .job-title {font-style:italic;}
 
+.quote {
+  font-style: italic;
+  font-size: 85%;
+}
+
 .sublist-1 {
   text-indent:0%;
   list-style:none;
