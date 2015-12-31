@@ -3,6 +3,35 @@
 <head>
 <title>Page Title</title>
 <link rel="stylesheet" type="text/css" href="resume.css">
+<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+
+	window.onload = function () {
+        CanvasJS.addColorSet("grayShades",
+                [//colorSet Array
+				"#B0B0B0",
+				"#909090",
+				"#707070",
+                "#505050"
+                ]);	
+	var chart = new CanvasJS.Chart("chartContainer", {
+		//colorSet: "grayShades",
+		data: [              
+		{
+			// Change type to "doughnut", "line", "splineArea", etc.
+			type: "pie",
+			dataPoints: [
+				{ label: "Desktop/Web Development", y: 135, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>C# .NET, SQL Server<br>ASP.NET MVC, Microsoft Azure<br>WPF, Windows Forms<hr>Omnis 7, Omnis Studio<br>Visual FoxPro, FoxPro<br>HyperCard<br>Clipper/dBase<br>THINK Pascal"  },
+				{ label: "Mobile Development", y: 135, toolTipContent:"<span style='font-weight:bold'>{label}</span><hr><span style='font-weight:bold'>Android, iPhone, iPad</span><br>Xamarin Platform (C#)<br>MvvmCross, MonoCross<br>Objective C, Java<br>SQLite<hr><span style='font-weight:bold'>Windows Mobile</span><br>Xamarin Platform (C#)<br>C# .NET Compact Framework<br>SQLite<hr><span style='font-weight:bold'>Windows CE</span><br>Mobile Visual Basic<br>Embedded Visual Basic<br>Visual Basic"  },
+				{ label: "Agile Project Management",  y: 70, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>Scrum<br>Kanban<br>Modified Waterfall<hr>Jira<br> Trello<br>Pivotal Tracker<br>Git"  },
+				{ label: "Product Management",  y: 20, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>Geospatial/Mapping & GIS<br>Market Solutions Team<br>Direct Store Delivery"  }
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
 </head>
 <body>
 
@@ -30,9 +59,11 @@
 <li>Resourceful, self-initiating, and accountable</li>
 </ul>
 
-<h2>HOW I CAN HELP</h2>
+<p>
+<span><h2>HOW I CAN HELP</h2></span>&nbsp<span class="quote">(Hover over pie chart for details)</span>
+</p>
 
-<img src="27 Slice Pie Chart.png">
+<div id="chartContainer" style="height: 500px; width: 75%"></div>
 
 <h2>MY EXPERIENCE</h2>
 
