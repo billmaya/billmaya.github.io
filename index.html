@@ -6,7 +6,7 @@
 	<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script type="text/javascript">
 
-		window.onload = function () {
+		function createSkillPieChart() {
 	        CanvasJS.addColorSet("grayShades1",
 	                [//colorSet Array
 					"#B0B0B0",
@@ -21,7 +21,7 @@
 	        		"#585858",
 	        		"#383838"
 	        		]);
-		var chart = new CanvasJS.Chart("chartContainer", {
+			var chart = new CanvasJS.Chart("chartContainer", {
 			colorSet: "grayShades2",
 			data: [              
 			{
@@ -33,15 +33,48 @@
 					{ label: "Agile Project Management",  y: 77, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>Scrum<br>Kanban<br>Modified Waterfall<hr>Jira<br> Trello<br>Pivotal Tracker<br>Git"  },
 					{ label: "Product Management",  y: 22, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>Geospatial/Mapping & GIS<br>Market Solutions Team<br>Direct Store Delivery"  }
 				]
-			}
-			]
-		});
-		chart.render();
-	}
+			}]});
+			chart.render();
+		}
+
+		function getInternetExplorerVersion()
+		// Returns the version of Internet Explorer or a -1
+		// (indicating the use of another browser).
+		{
+		  var rv = -1; // Return value assumes failure.
+		  if (navigator.appName == 'Microsoft Internet Explorer')
+		  {
+		    var ua = navigator.userAgent;
+		    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+		    if (re.exec(ua) != null)
+		      rv = parseFloat( RegExp.$1 );
+		  }
+		  return rv;
+		}
+
+		function checkVersion()
+		{
+		  var msg = "You're not using Internet Explorer.";
+		  var ver = getInternetExplorerVersion();
+
+		  if ( ver > -1 )
+		  {
+		    if ( ver >= 8.0 ) 
+		      msg = "You're using a recent copy of Internet Explorer."
+		    else
+		      msg = "You should upgrade your copy of Internet Explorer.";
+		  }
+		  alert( msg );
+		}
+
+		function pageFinishedLoading()
+		{
+			createSkillPieChart();
+			checkVersion();
+		}
 	</script>
 </head>
-	<body>
-
+	<body onload="pageFinishedLoading();">
 		<div id="one-col">
 			<span><h1>Bill Maya</h1></span>&nbsp
 			<!--<span>bill.maya@gmail.com</span>-->
