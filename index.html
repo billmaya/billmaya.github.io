@@ -19,7 +19,8 @@
 	        		"#989898",
 	        		"#787878",
 	        		"#585858",
-	        		"#383838"
+	        		"#383838",
+	        		"#686868"
 	        		]);
 			var chart = new CanvasJS.Chart("chartContainer", {
 			colorSet: "grayShades2",
@@ -28,8 +29,9 @@
 				// Change type to "doughnut", "line", "splineArea", etc.
 				type: "pie",
 				dataPoints: [
-					{ label: "Desktop/Web Development", y: 130, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>C# .NET, SQL Server<br>ASP.NET MVC, Microsoft Azure<br>WPF, Windows Forms<hr>Omnis 7, Omnis Studio<br>Visual FoxPro, FoxPro<br>HyperCard<br>Clipper/dBase<br>THINK Pascal"  },
-					{ label: "Mobile Development", y: 131, toolTipContent:"<span style='font-weight:bold'>{label}</span><hr><span style='font-weight:bold'>Android, iPhone, iPad</span><br>Xamarin Platform (C#)<br>MvvmCross, MonoCross<br>Objective C, Java<br>SQLite<hr><span style='font-weight:bold'>Windows Mobile</span><br>Xamarin Platform (C#)<br>C# .NET Compact Framework<br>SQLite<hr><span style='font-weight:bold'>Windows CE</span><br>Mobile Visual Basic<br>Embedded Visual Basic<br>Visual Basic"  },
+					{ label: "Desktop Development", y: 119, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>C# .NET, Visual Basic .NET/COM<br>SQL Server, Oracle<br>WPF, Windows Forms<hr>Omnis 7, Omnis Studio<br>Visual FoxPro, FoxPro<br>HyperCard<br>Clipper/dBase<br>THINK Pascal"  },
+					{ label: "Web Development", y: 22, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>C# .NET, ASP.NET MVC<br>Microsoft Azure, AWS<br>JavaScript, HTML, CSS"  },
+					{ label: "Mobile Development", y: 120, toolTipContent:"<span style='font-weight:bold'>{label}</span><hr><span style='font-weight:bold'>Android, iPhone, iPad</span><br>Xamarin Platform (C#)<br>MvvmCross, MonoCross<br>Objective C, Java<br>SQLite<hr><span style='font-weight:bold'>Windows Mobile</span><br>Xamarin Platform (C#)<br>C# .NET Compact Framework<br>SQLite<hr><span style='font-weight:bold'>Windows CE</span><br>Mobile Visual Basic<br>Embedded Visual Basic<br>Visual Basic"  },
 					{ label: "Agile Project Management",  y: 77, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>Scrum<br>Kanban<br>Modified Waterfall<hr>Jira<br> Trello<br>Pivotal Tracker<br>Git"  },
 					{ label: "Product Management",  y: 22, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>Geospatial/Mapping & GIS<br>Market Solutions Team<br>Direct Store Delivery"  }
 				]
