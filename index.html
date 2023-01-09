@@ -1,408 +1,66 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title>Bill Maya - Resume</title>
-	<link rel="stylesheet" type="text/css" href="index.css">
-	<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
-	<script type="text/javascript">
-
-		function createSkillPieChart() {
-	        CanvasJS.addColorSet("grayShades1",
-	                [//colorSet Array
-					"#B0B0B0",
-					"#909090",
-					"#707070",
-	                "#505050"
-	                ]);
-	        CanvasJS.addColorSet("grayShades2",
-	        		[
-	        		"#989898",
-	        		"#787878",
-	        		"#585858",
-	        		"#383838",
-	        		"#686868"
-	        		]);
-			var chart = new CanvasJS.Chart("chartContainer", {
-			colorSet: "grayShades2",
-			data: [
-			{
-				// Change type to "doughnut", "line", "splineArea", etc.
-				type: "pie",
-				dataPoints: [
-					{ label: "Desktop Development", y: 48, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>Python<br>C# .NET, Visual Basic .NET/COM<br>SQL Server, Oracle<br>WPF, Windows Forms<hr>Omnis 7, Omnis Studio<br>Visual FoxPro, FoxPro<br>HyperCard<br>Clipper/dBase<br>THINK Pascal"  },
-					{ label: "Web Development", y: 42, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>Salesforce, Heroku, Postgres<br>MongoDB, Express, React, Node.js<br>Elm, Phoenix/Elixir<br>ASP.NET MVC (C#)<br>Microsoft Azure<br>JavaScript, HTML, CSS"  },
-					{ label: "IOT & Mobile Development", y: 130, toolTipContent:"<span style='font-weight:bold'>{label}</span><hr><span style='font-weight:bold'>AWS</span><br>Amazon Lex<br>Alexa Voice Services<br>AWS Lambda<br>Amazon DynamoDB<hr><span style='font-weight:bold'>Android, iPhone, iPad</span><br>Xamarin Platform (C#)<br>MvvmCross, MonoCross<br>Objective C, Java<br>SQLite<hr><span style='font-weight:bold'>Windows Mobile</span><br>Xamarin Platform (C#)<br>C# .NET Compact Framework<br>SQLite<hr><span style='font-weight:bold'>Windows CE</span><br>Mobile Visual Basic<br>Embedded Visual Basic<br>Visual Basic"  },
-					{ label: "Agile Project Management",  y: 116, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>Scrum<br>Kanban<br>Hybrid Agile<br>Modified Waterfall<hr>Jira<br>Trello<br>Pivotal Tracker<br>ZenHub<br><hr>Slack<br>Basecamp<br>GitHub<br>Bitbucket"  },
-					{ label: "Product Management",  y: 24, toolTipContent: "<span style='font-weight:bold'>{label}</span><hr>Geospatial/Mapping & GIS<br>Market Solutions Team<br>Direct Store Delivery"  }
-				]
-			}]});
-			chart.render();
-		}
-
-		function getInternetExplorerVersion()
-		// Returns the version of Internet Explorer or a -1
-		// (indicating the use of another browser).
-		{
-		  var rv = -1; // Return value assumes failure.
-		  if (navigator.appName == 'Microsoft Internet Explorer')
-		  {
-		    var ua = navigator.userAgent;
-		    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
-		    if (re.exec(ua) != null)
-		      rv = parseFloat( RegExp.$1 );
-		  }
-		  return rv;
-		}
-
-		function checkVersion()
-		{
-		  var msg = "You're not using Internet Explorer.";
-		  var ver = getInternetExplorerVersion();
-
-		  if ( ver > -1 )
-		  {
-		    if ( ver >= 8.0 )
-		      msg = "You're using a recent copy of Internet Explorer."
-		    else
-		      msg = "You should upgrade your copy of Internet Explorer.";
-		  }
-		  alert( msg );
-		}
-
-		function pageFinishedLoading()
-		{
-			createSkillPieChart();
-			//checkVersion();
-		}
-	</script>
-</head>
-	<body onload="pageFinishedLoading();">
-		<div id="one-col">
-			<span><h1>Bill Maya</h1></span>&nbsp
-			<!--<span>bill.maya@gmail.com</span>-->
-			<br>
-			<span>"Always be in beta."</span>
-			<br><br><br>
-		</div>
-		<div id="two-col">
-			<div>
-				<h2>An Accomplished Software Developer Leading Agile Teams To Success</h2>
-
-				<p>Creating self-directed teams that can deliver software that provides value for a company and its customers throughout a product's lifetime is my goal. Managing, coaching, and mentoring developers so they can deliver on their commitments, realize their potential, and overcome challenges are steps towards that goal.</p>
-
-				<p>A long time developer, I know how software is built, I know what motivates the individuals who build it, and I've learned that the best ideas sometimes come from the unlikeliest of sources.</p>
-
-				<p>I bring the following skills, experience, and character to all my work.</p>
-
-				<ul>
-				<li>Significant Agile software development experience with co-located and remote teams</li>
-				<li>7+ years project/product management experience with strong technical leadership and communication skills</li>
-				<li>Focused on accomplishing measurable goals in a timely manner by establishing strong relationships with all stakeholders</li>
-				<li>Comfortable with new technologies, methodologies, and approaches</li>
-				<li>Able to lead in mutable situations—resourceful, self-starter, accountable</li>
-				</ul>
-			</div>
-			<div>
-				<h2>How I Can Help</h2>&nbsp;
-				<span class="quote">(Hover over pie chart for details)</span>
-				<div id="chartContainer" style="height: 450px; width: 100%"></div>
-			</div>
-		</div>
-		<div id="one-col">
-			<br><br>
-			<h2>My Experience</h2>
-      
-      <p>
-      <span class="company">Appirio</span>&nbsp
-      <span class="start-end-dates">January 2018&ndash;July 2018</span><br>
-      <span class="job-title">Senior Project Manager, Digital Studios/DXS</span>
-	  </p>
-	  
-		<p class="subheading-1">Lead remote development teams creating Worker/Customer experiences for client projects using mobile (iOS, Android) and cloud (Salesforce, Heroku) technologies.</p>
-		
-		<p>
-		<ul>
-		<li>UMB Bank - Business analysis for Salesforce strategy migration—vision map, personas, journey maps, art of the possible, capabilities inventory, scheduling estimates</li>
-		<li>CEO - Heroku Postgres remapping between existing Android app and new Salesforce instance</li>
-		<li>NiGEL - Siri/Lex iOS app for real-time voice control and update of Salesforce backend</li>
-		<li>Stryker - Assisted project PMs tracking financials, scheduling meetings, etc. across multiple teams/time zones. Filled in when PMs on vacation</li>
-		</ul>
-		</p>
-		
-		<p>
-		<ul class="subheading-2">
-		<li>Responsibilities</li>
-		</ul>
-		
-		<ul>
-		<li>Reviewed statement of work scope, assumptions, teams, process, and technology to identify risks and mitigations. Created project plan and schedule</li>
-		<li>Daily monitoring of scope, schedule, and financials to insure actuals track to plan. Facilitated regular status meetings between project/client teams and other stakeholders. Maintained high level of customer confidence by quickly removing roadblocks and adeptly managing change</li>
-		<li>Deconstructed customer business needs into functional epics and stories. Wrote detailed user stories and functioned as business analyst when needed</li>
-		</ul>
-		</p>
-
-      <p>
-      <span class="company">Mobiquity</span>&nbsp
-      <span class="start-end-dates">December 2016&ndash;October 2017</span><br>
-      <span class="job-title">Technical Delivery Manager</span>
-      </p>
-
-      <p class="subheading-1">Lead remote development teams creating Android, iOS, and Alexa experiences for client projects.</p>
-
-      <p>
-      <ul>
-      <li>The Children's Place - Specialty retail catalog, purchasing, and account management mobile app</li>
-      <li>IHG/Crowne Plaza - Alexa room automation, concierge, and guest services</li>
-      <li>BioPay/Six Capitol - Social health and wellness mobile app for Singapore and Indonesia</li>
-      </ul>
-      </p>
-
-      <p>
-      <ul class="subheading-2">
-      <li>Responsibilities</li>
-      </ul>
-
-      <ul>
-      <li>Owned technical projects from requirements through delivery. Recognized SME of required features/functions. Managed project scope, anticipating potential issues. Worked closely with Mobiquity and client PMs to report status and resolve meta-team issues</li>
-      <li>Worked with design, architecture, and business stakeholders to decompose epics into appropriately sized user stories for backlog. Wrote majority of user stories. Lead backlog grooming</li>
-      <li>Coordinated pre-build activities to insure Jira, Confluence, GitHub, Jenkins, Hockey infrastructure correctly configured. Administered as required
-      <li>Led daily standups. Helped team arrive at accurate level-of-effort estimates through sprint planning. Removed daily roadblocks and lead sprint retrospectives, enabling team to meet and maintain necessary velocity</li>
-      <li>Motivated and supported delivery team members. Delegated tasks and responsibilities to appropriate individuals. Provided additional design and documentation of technical solutions where needed. Identified and resolved conflicts within team</li>
-      </ul>
-	  </p>
-	  
-	  <p>
-		<span class="company">Legably</span>&nbsp
-		<span class="start-end-dates">October 2016&ndash;Present</span><br>
-		<span class="job-title">CTO/Co-Founder (P/T)</span>
-		</p>
-
-		<!--
-			- MERN - KiwiTech - Project management, payment providers, biz > stories
-			- Elm, Phoenix/Elixir/Heroku - MVP developemnt raise angel funds. Due diligence development teams Phase 1 development
-		-->
-
-			<p>
-			<span class="company">CVS Health</span>&nbsp
-			<span class="start-end-dates">April 2014&ndash;June 2016</span><br>
-			<span class="job-title">Manager, Mobile Application Development</span>
-			</p>
-
-			<ul class="subheading-2">
-				<li>DevOps</li>
-			</ul>
-
-			<p>
-			<ul>
-				<li>Responsible for Android/iPhone mobile security compliance tied to monthly releases for entire smartphone portfolio&mdashRetail Pharmacy, Caremark, Specialty</li>
-			</ul>
-			</p>
-
-				<ul class="sublist-1">
-					<li>&ndash; Triaged weekly Veracode scans. Proposed mitigations after code review</li>
-					<li>&ndash; Worked with internal/external developers for unmitigatable code fixes</li>
-					<li>&ndash; Single point of contact for enterprise security group and project SRAs</li>
-					<li>&ndash; Used REST utilities and RTC to streamline workflow</li>
-				</ul>
-
-			<p>
-			<ul>
-				<li>Insured all project work included in monthly releases by implementing SVN branching/merging strategy based on Flow of Change/TOFU concepts. Attempted Git migration and implementation of new branching/merging process</li>
-				<li>Improved current ExtraCare iPhone code quality and expansion potential by indentifying debt in current codebase (17,874 LOC). Managed developers making changes
-			</ul>
-			</p>
-
-			<ul class="subheading-2">
-				<li>Project Management</li>
-			</ul>
-
-			<p>
-			<ul>
-				<li>Managed, coached and mentored Android/iPhone onshore & offshore teams. Vetted developer resumes prior to interviewing potential candidates</li>
-				<li>Introduced all teams to Agile&mdash;user stories, product backlog, sprints, standups&mdashto build a better product and foster developer accountability and ownership</li>
-				<li>Successfully delivered multiple concurrent enterprise-level CVS smartphone projects
-				for Retail Mobile <span class="link">(<a href="http://goo.gl/Cbcviw">goo.gl/Cbcviw</a>, <a href="http://goo.gl/JGrqAG">goo.gl/JGrqAG</a>)</span></li>
-			</ul>
-			</p>
-
-			<ul class="sublist-1">
-				<li>&ndash; Created actionable user story backlog from Waterfall requirements</li>
-				<li>&ndash; Reduced rework by demoing software early and often</li>
-				<li>&ndash; Encouraged cross-team conversations to anticipate and manage change</li>
-			</ul>
-
-			<ul class="subheading-1">
-				<li>Retail Pharmacy Project Highlights</li>
-			</ul>
-
-			<ul class="sublist-1">
-				<li>&ndash; Complete mobile web-to-native conversion of ExtraCare experience</li>
-				<li>&ndash; Reduction in mobile security vulnerabilities from triple to single digits</li>
-				<li>&ndash; Implemented Scrum for small project (SMP) process with offshore developers</li>
-				<li>&ndash; Delivered product scanning project on time despite extremely agressive schedule</li>
-			</ul>
-
-			<ul>
-				<li>Facilitated weekly status reporting to business by creating Trello/JavaScript utility. Streamlined resume intake using Trello</li>
-			</ul>
-
-			<p>
-			<span class="company">MojoTech</span>&nbsp
-			<span class="start-end-dates">February 2012&ndash;July 2012</span><br>
-			<span class="job-title">Product/Project Manager (P/T)</span>
-			</p>
-
-			<ul>
-				<li>Managed 60% of current projects, freeing founders to concentrate on business dev</li>
-				<li>Refined client designs into acceptable user stories for Agile development</li>
-				<li>Managed developers across multiple time zones. Monitored daily progress. Resolved roadblocks. Worked with design staff to meet project milestones</li>
-			</ul>
-
-			<p>
-			<span class="company">Mobiel.io</span>&nbsp
-			<span class="start-end-dates">2009&ndash;Present</span><br>
-			<span class="job-title">Mobile Software Developer/Designer (P/T)</span>
-			</p>
-
-			<p class="subheading-1">Smartphone/tablet apps, games, and prototypes</p>
-
-			<ul>
-				<li>Campaign Puppets &ndash; iOS/Android political debate game <span class="link">(<a href="http://goo.gl/TjZXyZ">goo.gl/TjZXyZ</a>)</span></li>
-				<li>Viand &ndash; Food shopping list Android/iPhone app with Azure backend <span class="link">(<a href="http://goo.gl/XDpZLF">goo.gl/XDpZLF</a>)</span></li>
-				<li>Where&rsquo;s George &ndash; iPhone Twitter client for pets <span class="link">(<a href="http://goo.gl/6J7CnW">goo.gl/6J7CnW</a>)</span></li>
-				<li>Balance of the Planet &ndash; iPad environmental management simulation <span class="link">(<a href="http://goo.gl/NQozxb">goo.gl/NQozxb</a>)</span></li>
-				<li>Teen Talk &ndash; iPhone/iPad social simulation game <span class="link">(<a href="http://goo.gl/I6WDx9">goo.gl/I6WDx9</a>)</span></li>
-				<li>Camelot &ndash; iPhone political primary simulation game <span class="link">(<a href="http://goo.gl/kEzU0V">goo.gl/kEzU0V</a>)</span></li>
-				<li>The Curatorium &ndash; Android/iPhone prototype leveraging retail web site <span class="link">(<a href="http://goo.gl/7UBMDn">goo.gl/7UBMDn</a>)</span></li>
-				<li>QuickGifter &ndash; Gift management iPhone app <span class="link">(<a href="http://goo.gl/Czlo6z">goo.gl/Czlo6z</a>)</span></li>
-			</ul>
-
-			<p>
-			<span class="company">Trimble Inc.</span>&nbsp
-			<span class="start-end-dates">June 2006&ndash;April 2014</span><br>
-			<span class="job-title">Mobile Software Engineer</span>
-			</p>
-
-			<p class="subheading-1">Programmed mobile (Android, iPhone, Windows Mobile) and desktop (WPF, Windows Forms) apps across multiple domains. Fulfilled various product/project-related roles as needed.</p>
-
-			<ul class="sublist-1">
-				<li>&ndash; Geospatial/Mapping & GIS</li>
-				<li>&ndash; Direct Store Delivery</li>
-				<li>&ndash; Market Solutions Team</li>
-				<li>&ndash; Utility Field Solutions</li>
-				<li>&ndash; Mobile Resource Management</li>
-			</ul>
-
-			<ul class="subheading-2">
-				<li>Key Achievements</li>
-			</ul>
-
-			<ul>
-				<li>Developed Xamarin iPhone, Android, Windows Mobile apps <span class="link">(<a href="http://goo.gl/JpUV1m">goo.gl/JpUV1m</a>)</span>. 60%-70% code reuse</li>
-				<li>Developed DSD product roadmap, evaluated 3rd party platforms. Research bulk delivery Market</li>
-				<li>Prototyped "boxed products" to solve Trimble customer real-world problems. Transitioned prototypes to internal PM groups after field testing. Research smartphone market</li>
-				<li>Managed Shetland concept-to-prototype project. Developed Windows Mobile app using proprietary SDKs. Supervised ArcGIS development. Performed prototyp-to-product due diligence</li>
-				<li>Product owner & scrum master on Fieldport/UC portmanteau project. Coached team on Scrum</li>
-				<li>Kickstarted TrimForm project <span class="link">(<a href="http://goo.gl/fUpJZg">goolgl/fUpJZg</a>)</span>. Created product backlog. Scrum master. Provide product and technical direction as needed</li>
-				<li>Coded Visual Studio DSL editor for workflow creation. Enhanced TrimFlow workflow engine. Developed FS/M Workbench editors. Coded DSD CPG pricing/promotion engine</li>
-			</ul>
-
-			<p>
-			<span class="company">Global Payments, Inc.</span>&nbsp
-			<span class="start-end-dates">May 2002&ndash;June 2005</span><br>
-			<span class="job-title">Software Engineer</span>
-			</p>
-
-			<ul>
-				<li>Project lead on Oracle 9i/Oracle 11i Applications Suite integration project</li>
-				<li>Reduced two-week manual monthly billing to four hours as Omnis 7 billing automation project lead</li>
-				<li>Developed numerous enhancements to Omnis 7 customer service/inventory/logistics system for POS terminals. Hired and managed contractors</li>
-			</ul>
-
-			<p>
-			<span class="company">Contractor - Mobile Development</span>&nbsp;
-			<span class="start-end-dates">May 1998&ndash;May 2006</span><br>
-			<span class="job-title">.NET CF, Visual Basic, Mobile VB</span>
-			</p>
-
-			<p class="subheading-1">Development of the following mobile software applications</p>
-
-			<ul>
-				<li>Visual Basic McDonalds coffee quality maintenance call surveys <span class="link">(Ken's Beverage)</span></li>
-				<li>Embedded Visual Basic generic field data collection <span class="link">(Ken's Beverage)</span></li>
-				<li>Mobile VB Burger King quality maintenance call surveys <span class="link">(Ken's Beverage)</span></li>
-				<li>Embedded Visual Basic McDonalds quality maintenance call surveys <span class="link">(Ken's Beverage)</span></li>
-				<li>Visual Basic lead mitigation clearance application design <span class="link">(RI Housing Resource Commission)</span></li>
-				<li>MobileVB activity/expense manager Nokia 9210 <span class="link">(AppForge)</span></li>
-				<li>MobileVB invoice billing prototype <span class="link">(Sara Lee Coffee & Tea)</span></li>
-				<li>MobileVB retail jewelry MLM tracking <span class="link">(Premier Designs)</span></li>
-				<li>Visual Basic CE McDonalds QMC Survey <span class="link">(The Coca-Cola Company)</span></li>
-			</ul>
-
-			<p>
-				<span class="company">Contractor - Client/Server Development</span>&nbsp;
-				<span class="start-end-dates">November 1994&ndash;May 2001</span><br>
-				<span class="job-title">Visual FoxPro, FoxPro, Visual Basic, Omnis 7</span>
-			</p>
-
-			<p class="subheading-1">Software development and maintenance on the following software applications</p>
-
-			<ul>
-				<li>Visual Basic front-end loan processing enhancements <span class="link">(Alltel)</span></li>
-				<li>Omnis 7 McDonalds QMC scheduling/tracking <span class="link">(The Coca-Cola Company)</span></li>
-				<li>Visual FoxPro telemarketing prospect/pledge management <span class="link">(JAK Productions)</span></li>
-				<li>Foxpro HR OCR data valiation <span class="link">(Equifax)</span></li>
-				<li>Omnis 7 permanent/locum tenens medical recruiting and billing <span class="link">(Jackson & Coker)</span></li>
-				<li>Visual FoxPro accounting and human resources <span class="link">(Salvation Army)</span></li>
-				<li>FoxPro/Mac advertising management <span class="link">(Federated Dept. Stores)</span></li>
-				<li>FoxPro month-end financial reconciliation <span class="link">(MCI/Worldcom)</span></li>
-			</ul>
-
-			<p>
-				<span class="company">Keane/GE Consulting Services</span>&nbsp;
-				<span class="start-end-dates">August 1990&ndash;October 1994</span><br>
-				<span class="job-title">Consultant</span>
-			</p>
-
-			<ul>
-				<li>Team leader of FoxPro telecom billing system refactoring team <span class="link">(GE Exchange)</span></li>
-				<li>System developer on FoxPro telecom order entry/tracking system <span class="link">(GE Exchange)</span></li>
-				<li>Fortune 500 1st & 2nd level software, hardware, networking help desk support
-			</ul>
-
-			<p>
-				<span class="company">Application Developer</span>&nbsp;
-				<span class="start-end-dates">November 1988&ndash;March 1990</span><br>
-				<span class="job-title">Clipper/dBase, HyperCard, THINK Pascal</span>
-			</p>
-
-			<ul>
-				<li>Clipper/dBase maintenance on retail POS application <span class="link">(Seaport Software)</span></li>
-				<li>Developed HyperCard educational software <span class="link">(University of Rhode Island)</span></li>
-				<li>Developed THINK Pascal framework for monthly Mac disk magazine <span class="link">(Uptime)</span></li>
-			</ul>
-
-			<h3>CERTIFICATIONS</h3>
-
-			<ul>
-				<li>Certified Scrum Master (in progress)</li>
-				<li>AWS Certified Solutions Architect - Associate (in progress)</li>
-				<li>Microsoft Certified Solutions Developer (MCSD) .NET certification &ndash; April 2006</li>
-				<li>Microsoft Certified Applications Developer (MCAD) .NET certification &ndash; Jan 2006</li>
-			</ul>
-
-			<h3>EDUCATION</h3>
-
-			<ul>
-				<li>BFA, Film & Television, Tisch School of the Arts, New York University</li>
-				<li>Computer Science, Rensselaer Polytechnic Institute</li>
-			</ul>
-
-			<h3>OTHER</h3>
-
-			<ul>
-				<li>Eagle Scout, BSA &ndash; &ldquo;Trustworthy, Loyal, Helpful, Friendly, Courteous, Kind, etc.&rdquo;</li>
-			</ul>
-		</div>
-	</body>
+    <head>
+        <title></title>
+        <style type="text/css">
+            .title {
+                text-decoration: none;
+             } 
+            div.heading {
+                font-weight: bold;      
+                text-transform: uppercase;
+                margin-top: 4ch;
+            }
+            html {
+                font-family: fabfont;
+                max-width: 900px;  /* For Desktop PC (see @media for Tablets/Phones) */
+                padding-left: 2%;
+                padding-right: 3%;
+                margin: 0 auto;
+                background: #F5F5F0;
+  	        } 
+  	        a {
+                color: black;
+                font-weight: bold;
+            }
+        </style>
+        <title>Bill Maya's Website</title>
+    </head>
+    <body>
+        <br>
+        <center>
+            <div style="display: inline-block; vertical-align:middle;">
+                <a class="title" href="/">
+                    <b>BILL MAYA'S WEBSITE</b>
+                    <br>
+                </a>
+                <hr>
+                <div style="text-align: justify; display: inline-block; width: 100%;">
+                    <a class="title" href="">ABOUT</a>
+                    <a class="title" href="">EMAIL</a>
+                    <a class="title" href="">LINKEDIN</a>
+                </div>
+            </div>
+        </center>
+        <br>
+        <br>
+        <div style="margin-bottom: 2ch; text-transform: none;">
+        </div>
+        <div class="heading">Bill Maya's Website</div>
+        <hr>
+        <p>Scelerisque in dictum non consectetur a erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu non</p>
+        <div class="heading">Posts</div>
+        <hr>
+        <p style="text-align: left; margin-bottom: 1ch;">
+            01/09/2023:
+            <a href="">A sample post...</a>
+            <br>
+            01/08/2023:
+            <a href="">Another sample post...</a>
+            <br>
+            01/07/2023:
+            <a href="">Yet another sample post...</a>
+        </p>
+        <hr>
+        <center>*</center>
+    </body>
 </html>

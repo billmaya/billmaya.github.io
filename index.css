@@ -1,69 +1,110 @@
-* {font-family:Verdana, Geneva;}
+ <style type="text/css">
 
-h1 {display: inline;}
+    @font-face {
+      font-family: 'fabfont';
+/*      font-display: optional;*/
+      src: url('/font/DejaVuSansMono.woff2');
+    }
 
-h2 {display: inline;}
+    * {
+       font-size: 16px;
+    }
 
-ul {list-style-type: square;}
+    html {
+      font-family: fabfont;
+      max-width: 900px;  /* For Desktop PC (see @media for Tablets/Phones) */
+      padding-left: 2%;
+      padding-right: 3%;
+      margin: 0 auto;
+      background: #F5F5F0;
+  	} 
+    
 
-.name {
-  font-size: 225%;
-}
 
-.company {
-  font-weight:bold;
-}
+  	a {
+      color: black;
+      font-weight: bold;
+    }
 
-.start-end-dates {
-  text-indent:10%
-  direction:rtl;
-}
-.job-title {font-style:italic;}
+    img {
+      border: none; 
+    }
 
-.quote {
-  font-style: italic;
-  font-size: 85%;
-}
+    p {
+      margin-top: 0px;
+      text-align: justify;
+    }
+    sup {
+      vertical-align: 0.3em;
+      font-size: 0.65em;
+    }   
 
-.sublist-1 {
-  text-indent:0%;
-  list-style:none;
+    pre {
+      font-family: fabfont;
+      background-color: white; 
+      border: 1px solid Black; 
+      padding-left: 2%;
+      padding-top: 1ch;
+      padding-bottom: 1ch;
+      /* Only take care of X overflow since this is the only part that can be too wide.
+         The Y axis will never overflow.
+      */
+      overflow: hidden;
+    }
+
+    div.heading {
+      font-weight: bold;      
+      text-transform: uppercase;
+      margin-top: 4ch;
+    }
+
+    /** {
+      font-size: 16px;
+    }*/
+    @media (max-width: 500px) { /* For small screen decices */
+      * {
+        font-size: 12px; 
+      }
+    }   
+    .title {
+      text-decoration: none;
+    }
+
+    img.pixel, canvas.pixel {
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+
+    blockquote { 
+    background-color: #f3f3f3;
+    border: dashed 1px grey; 
+    width: 97.5%; 
+    font-style: italic; 
+    text-align: justify;
+
+    padding: 1ch; 
+    padding-top: 2ch; 
+    padding-bottom: 2ch;     
+    
+    margin : 0ch; 
+    margin-bottom: 2ch; 
+    margin-top: 0ch;
   }
 
-.sublist-2 {
-  text-indent:2%;
-  list-style:none;
-}
+  blockquote div {
+    text-transform: none;
+    text-align: right;
+    width: 100%;
+  }
 
-.sublist-3 {
-  text-indent:2%;
-}
-  
-.subheading-1 {
-  text-indent:0%;
-  list-style:none;
-}
+  code {
+    /*font-size: 110%;*/
+    font-weight: bold;
+    background-color: #e1e1e1;
+    border-radius: 0.5ch;
+    padding-left: 0.3ch;
+    padding-right: 0.3ch;
+  }
 
-.subheading-2 {
-  text-indent:0%;
-  list-style:none;
-  text-decoration:underline;
-}
-
-.link {
-  font-size:85%;
-  font-style:italic;
-}
-
-#one-col {
-  column-count: 1;
-  -moz-column-count: 1;
-  -webkit-column-count: 1;
-}
-
-#two-col {
-  column-count: 2;
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-width: 35px;
-}
+  </style>
